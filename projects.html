@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+
+	
+#shark{
+	width:400px;
+	height:400px;
+	position:absolute;
+	/*background-image: url(https://i.pinimg.com/originals/c3/14/90/c31490dae72984aa1554764fcc372df0.gif);*/
+		background-image: url(shark2.gif);
+
+	background-size:contain;
+	background-repeat:no-repeat;
+
+	}
+
+
+#diver{
+	width:400px;
+	height:500px;
+	background-image:url(diver2.gif);
+	position:absolute;
+	background-repeat:no-repeat;
+	background-size:contain;
+	background-size:center;
+	left:50px;
+	top:400px
+
+
+}
+
+@keyframes diver{
+	0%{
+				left:-500px;
+				top:100px;
+				transform:rotate(5deg);
+		}
+		50%{
+				left:400px;
+				top:250px;
+				transform: rotate(10deg);
+		}
+
+		75%{
+				left:600px;
+				top:110px;
+				transform: rotate(10deg);
+		}
+
+		100%{
+				left:1000px;
+				top:200px;
+				transform: rotate(20deg);
+		}
+}
+
+
+
+
+
+	body{
+		background-color:lightseagreen;
+		font-size:30px;
+		font-family:courier;
+		font-color:;
+		
+	}
+
+
+	
+
+</style>
+
+	
+</head>
+<body>
+
+	Welcome to the projects page!
+
+	
+
+			
+
+
+</body>
+<div id="shark"></div>
+<div id="diver"></div>
+
+<script type="text/javascript">
+	
+	shark.style.left="500px"
+
+	document.addEventListener("keypress",function(){
+		console.log("hi annike")
+		shark.style.left= parseInt(shark.style.left)-100+"px"
+	})
+
+</script>
+
+</html>

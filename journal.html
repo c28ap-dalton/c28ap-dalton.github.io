@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<style type = "text/css">
+		
+
+
+#movingseaweed{
+	width:300px;
+	height:300px;
+	background-image:url(https://i.pinimg.com/originals/d0/31/c3/d031c3f789568b64ce3132f7221fc82b.gif);
+	background-size:center;
+	background-size:contain;
+	background-repeat:no-repeat;
+	position:absolute;
+	top:500px;
+	left:800px;
+}
+
+#movingorca{
+	width:400px;
+	height:260px ;
+	background-image:url(https://www.enchantedlearning.com/ogifs/Orcaanim.gif);
+	background-size:center;
+	background-size:contain;
+	background-repeat:no-repeat;
+	position:absolute;
+	top:200px;
+	left:100px;
+	animation-name:swim;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+
+@keyframes swim{
+	0%{
+				left:100px;
+				top:300px;
+				transform:rotate(5deg);
+		}
+		50%{
+				left:200px;
+				top:250px;
+				transform: rotate(10deg);
+		}
+
+		75%{
+				left:350px;
+				top:300px;
+				transform: rotate(10deg);
+		}
+
+		100%{
+				left:400px;
+				top:200px;
+				transform: rotate(20deg);
+		}
+
+
+}
+
+
+
+
+
+		body{
+			background-color:lightblue;
+			font-family: courier;
+			
+
+		}
+
+		a{
+			font-size: 20px;
+			color: darkblue;
+		}
+		h3{
+			color:green;
+		}
+
+
+		p {
+		color:black;
+		font-size:16px;
+
+		}
+
+
+	</style>
+	
+
+	
+</head>
+<body>
+
+	<a href="index.html"> back to home page </a>
+
+	<h3>Entry 1— 10-15-25</h3>
+	<p>Today I worked on making my fish move like actual fish! </p>
+
+
+	<h3>Entry 2 — 10-30-25</h3>
+	<p>Today I attempted to put my website on the internet, but it decided to be unhelpful and I am stuck with "404 error" . . . </p>
+
+	<h3> Entry 3 -11-24-25</h3>
+	<p>Worked on putting a diver in the ocean and polished up some event listeners </p>
+
+</body>
+<div id="movingseaweed"></div>
+<div id="movingorca"></div>
+
+</html>
+
