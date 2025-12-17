@@ -199,10 +199,20 @@
 		 		background-repeat:background-repeat;
 		 		position:absolute;
 		 		top:500px;
-		 		left:400px;
+		 		left:400px; }
+
+		 		#starfish{
+		 			width:400px;
+		 			height:400px;
+		 			background-image:url(starfish.png);
+		 			background-size:center;
+		 			background-size:contain;
+		 			background-repeat:no-repeat;
+
+		 		}
 
 
-		 	}
+		 	
 		 	
 	</style>
 
@@ -210,7 +220,7 @@
 </head>
 <body>
 
-	Welcome to Annike's Ocean Website
+	<center> Welcome to Annike's Ocean Website </center>
 
 
 
@@ -237,7 +247,17 @@
 <div id="corals"></div>
 <div id="coralseaweed"></div>
 <div id="stingray"></div>
+<div id="starfish"></div>
 
+<script type="text/javascript">
+	
+	starfish.style.right="400px"
+
+	document.addEventListener("keypress",function(){
+		console.log("hi annike")
+		starfish.style.right= parseInt(starfish.style.left)-100+"px"
+	})
+</script>
 
 
 </body>

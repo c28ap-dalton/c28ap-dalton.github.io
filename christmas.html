@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	
+	<style type = "text/css">
+
+		#sleigh{
+			width:800px;
+		height:500px;
+		position:absolute;
+		background-size:contain;
+		background-repeat: no-repeat;
+		background-image: url(sleigh.png);
+
+		animation-name: move;
+		animation-duration: 10s;
+		animation-iteration-count:infinite;
+		top:300px;
+		
+
+		}
+
+		#text{
+			font-size:50px;
+			font-family:cursive;
+			top:150px;
+			
+			color:white;
+			height:200px;
+			position:relative;
+			background-size:contain;
+			background-repeat:no-repeat;
+			opacity:0;
+			transition:2s;
+
+		}
+
+		#moon{
+			width:300px;
+			height:200px;
+			position:absolute;
+			background-size:contain;
+			background-repeat:no-repeat;
+			background-image: url(moon.png);
+			top:50px;
+			left:50px;
+		}
+
+
+
+
+
+		a{
+		font-size:15px;
+		text-decoration: none;}
+
+		body{ 
+		background-image: url(nightsky.jpg);
+		background-position:center;
+		background-size:cover;
+
+		} 
+	</style>
+
+
+</head>
+<body>
+	<div id="sleigh"></div>
+	<center><div id="text"> Happy Hoidays!</div></center>
+	<div id="moon"></div>
+
+
+	<script type="text/javascript">
+
+		// let clickcounter=0
+		// document.addEventListener("click", function(){
+		// 	clickcounter=clickcounter+1
+		// 	console.log(clickcounter)
+
+		// 	if(clickcounter==1){
+		// 		text.style.opacity="1"
+
+		// 	}
+
+
+		// 	if(clickcounter==2){
+		// 	alert("merry christmas!")
+
+				
+		// 	}
+
+
+		// })	
+
+
+
+
+
+
+
+
+
+	sleigh.style.left="-300px"
+
+	document.addEventListener("keypress",function(event){
+		console.log(event)
+
+		sleigh.style.left= parseInt(sleigh.style.left)+200+"px"
+		text.style.opacity="1"
+
+		if(event.key=="s"){
+			text.innerText="happy new year!"
+		}
+
+		if(event.key=="m"){
+			text.innerText="happy new year!"
+		}
+
+		else{
+			text.innerText = "Happy Holidays"
+
+		}
+	})
+
+</script>
+
+
+</body>
+</html>
