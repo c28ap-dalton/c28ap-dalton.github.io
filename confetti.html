@@ -8,6 +8,7 @@
 			height:50px;
 			border:5px solid maroon;
 			position: absolute;
+			/*transform:rotate( 24 deg);*/
 		}
 		
 
@@ -23,8 +24,7 @@
 	let fallfactor=0
 
 		function makeConfetti (){
-			let square= document.createElement(
-				"div")
+			let square= document.createElement("div")
 			square.classList.add("confetti")
 			document.body.appendChild(square)
 			let r=Math.round(Math.random()*255)
@@ -36,6 +36,12 @@
 				square.style.left=Math.random()*1000+"px"
 				square.style.top="-100px"
 
+				square.style.width=Math.random()*100+"px"
+				square.style.height=Math.random()*100+"px"
+				square.style.transform="rotate("+Math.random()*360+"deg)"
+
+
+
 				function fall(){
 					fallfactor=fallfactor+10
 					square.style.top=parseInt(square.style.top)+fallfactor+"px"
@@ -44,6 +50,8 @@
 						fallfactor=0
 					}
 				}
+
+
 
 				setInterval(fall,300)
 
