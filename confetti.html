@@ -8,10 +8,23 @@
 			height:50px;
 			border:5px solid maroon;
 			position: absolute;
-			/*transform:rotate( 24 deg);*/
+			animation-name: swing;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			animation-timing-function: ease-in-out;
+
+			
 		}
 		
+		@keyframes swing {
+			from {
+				transform: rotate(var(--startRot));
+			}
+			to {
+				transform: rotate(var(--endRot));
 
+			}
+		}
 
 
 
@@ -31,6 +44,9 @@
 			let g=Math.round(Math.random()*255)
 			let b=Math.round(Math.random()*255)
 			square.style.backgroundColor= "rgb("+r+","+g+","+b+")"
+
+			let startRot=Math.random() * -45 + "deg"
+			let endRot = Math.random() * 45 + "deg"
 		
 		
 				square.style.left=Math.random()*1000+"px"
@@ -39,7 +55,8 @@
 				square.style.width=Math.random()*100+"px"
 				square.style.height=Math.random()*100+"px"
 				square.style.transform="rotate("+Math.random()*360+"deg)"
-
+square.style.setProperty("--startRot", startRot)
+square.style.setProperty("--endRot", endRot)
 
 
 				function fall(){
@@ -53,16 +70,16 @@
 
 
 
-				setInterval(fall,300)
+				setInterval(fall,1000)
 
 
-					}// end of big function//
+				}// end of big function//
 
 
 
 
 
-				setInterval(makeConfetti, 20)
+				setInterval(makeConfetti, 200)
 
 
 
