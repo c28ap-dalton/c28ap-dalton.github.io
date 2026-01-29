@@ -55,10 +55,10 @@ console.log(colors)
 
 			let startRot=Math.random() * -45 + "deg"
 			let endRot = Math.random() * 45 + "deg"
-			let randomColorIndex = Math.floor(Math.random()+colors.length)
+			let randomColorIndex = Math.floor(Math.random() * colors.length)
 			console.log(randomColorIndex)
 		
-		
+				square.style.backgroundColor = colors[randomColorIndex]
 				square.style.left=Math.random()*1000+"px"
 				square.style.top="-100px"
 
