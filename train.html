@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta chartset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>train</title>
+	<style>
+
+		#train {
+			display: flex;
+			gap:12px;
+		}
+
+		.cart{
+			border:1px solid black;
+			min-width: 100px;
+			height:80px;
+			text-align:center;
+			position:relative;
+		}
+
+		.cart:before{
+			content:"";
+			width:30px;
+			height:30px;
+			border:1px solid black;
+			border-radius:50%;
+			display:block;
+			position:absolute;
+			bottom:-15px;
+			left:10px;
+			background-color: white;
+		}
+
+		.cart:after {
+			content:"";
+			width:30px;
+			height:30px;
+			border:1px solid black;
+			border-radius:50%;
+			display:inline-block;
+			position:absolute;
+			bottom:-15px;
+			right:10px;
+			background-color:white;
+		}
+
+
+	</style>
+</head>
+<body>
+
+	<input type="text" id="person">
+	<button id="add-person"> add person</button>
+	<button id="remove-last-person"> remove last person</button>
+
+		
+<!-- 
+	<input type="text" id="person">
+	<button id="add-person">add person</button> -->
+
+	<div id="train">
+			<div class="cart">annike</div>
+			<div class="cart">lily</div>
+			<div class="cart">veronica</div>
+		</div>
+
+
+	<script>
+		
+		let people=["annike","lily", "veronica"]
+
+		 let addPersonBtn= document.getElementById("add-person")
+		 addPersonBtn.addEventListener("click",function(){
+		 	let personInput=document.getElementById ("person") 
+
+		 	people.push(personInput.value)
+		 	personInput.value=""
+
+
+		 	console.log(people)
+		 })
+	</script>
+
+</body>
+</html>
