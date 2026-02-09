@@ -61,15 +61,32 @@
 	<button id="add-person">add person</button> -->
 
 	<div id="train">
-			<div class="cart">annike</div>
-			<div class="cart">lily</div>
-			<div class="cart">veronica</div>
-		</div>
+
+	</div>
 
 
 	<script>
 		
 		let people=["annike","lily", "veronica"]
+		let train = document.getElementById("train")
+		
+
+
+		function makeTrain() {
+			for(var i=0; i < people.length; i++) {
+				// do some stuff
+				console.log(people[i])
+				// create a new div
+				let cart = document.createElement("div")
+				// add a class tothe div
+				cart.textContent = people[i]
+				cart.classList.add("cart")
+				train.appendChild(cart)
+			}
+
+		}
+
+		makeTrain()
 
 		 let addPersonBtn= document.getElementById("add-person")
 		 addPersonBtn.addEventListener("click",function(){
