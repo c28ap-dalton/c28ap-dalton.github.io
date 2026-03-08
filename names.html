@@ -8,13 +8,13 @@
 			background-color:rgb(0,0,255);
 		}
 
-		/*.flowers{
+		.flowers{
 			width:40px;
 			height:40px;
 			bckground-image: url(https://as1.ftcdn.net/jpg/15/68/51/38/1000_F_1568513817_kEEczIHGaxLzgar4MO9pmmUpXdAJusWE.jpg);
 		}
 
-*/
+
 		
 
 	</style>
@@ -42,25 +42,25 @@
 				 document.body.style.backgroundColor = "rgb("+r+ "," +g+","+b+ ")"
 			})
 
-		// function makeFlower(){
-		// 	let flower =
-		// 	document.createElement ("div")
-		// 	flower.classList.add("flowers")
-		// 	document.body.appendChild(flowers)
-		// }
-		// document.addEventListener("click", makeFlower)
+		function makeFlower(){
+			let flower =
+			document.createElement ("div")
+			flower.classList.add("flowers")
+			document.body.appendChild(flowers)
+		}
+		document.addEventListener("click", makeFlower)
 
 		
 
 
-		// let names = ["passionflower", "orchids","geraniums", "zinnias", "irises", "hollyhock", "violets", "marigolds"]
+		let names = ["passionflower", "orchids","geraniums", "zinnias", "irises", "hollyhock", "violets", "marigolds"]
 
-		// document.addEventListener("click", function(){
-		// 	let x = Math.round(Math.random()*8
-		// )
+		document.addEventListener("click", function(){
+			let x = Math.round(Math.random()*8
+		)
 		
-		// console.log(x)
-		// 	alert(names[x])})
+		console.log(x)
+			alert(names[x])})
 
 		</script>
 

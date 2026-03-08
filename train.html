@@ -52,6 +52,7 @@
 <body>
 
 	<input type="text" id="person">
+	<input type="color" id="colorPicker" name="" value="#ff0000">
 	<button id="add-person"> add person</button>
 	<button id="remove-last-person"> remove last person</button>
 
@@ -66,38 +67,86 @@
 
 
 	<script>
+
+		let annike ={
+			name:"annike",
+			studentId: "c28ap",
+			fav_color: "burgundy",
+			lucky_num:3
+		}
+
+		let veronica ={
+			name:"veronica",
+			studentId:"c28vl",
+			fav_color:"brown",
+			lucky_num:8
+		}
+
+
+		let people=[annike, veronica, {name: "annike", fav_color: "burgundy"}]
+		console.log(people[1])
+
+		let annike_fav_food = ["apple", "banana", "orange"]
+		// console.log(annike_fav_food[0])
+		// console.log(annike_fav_food[1])
+		// console.log(annike_fav_food[2])
+		// console.log(annike_fav_food.length)
+		// for loop -> for loop is a cs term to help us to repeated things in 3 lines of code
+		// for (let i = 0; i < annike_fav_food.length; i++) {
+		// 	console.log(annike_fav_food[i])
+		// }
+
 		
-		let people=["annike","lily", "veronica"]
+		// let people=["annike","lily", "veronica"]
+		
 		let train = document.getElementById("train")
 		
 
 
 		function makeTrain() {
+			train.innerHTML=""
 			for(var i=0; i < people.length; i++) {
 				// do some stuff
 				console.log(people[i])
 				// create a new div
 				let cart = document.createElement("div")
 				// add a class tothe div
-				cart.textContent = people[i]
+
+				cart.textContent = people[i].name
+				cart.style.backgroundColor = people[i].fav_color
+				// cart.style.backgroundColor =
 				cart.classList.add("cart")
 				train.appendChild(cart)
 			}
 
 		}
 
+		function myFunctionName() {
+			//do sth here
+		}
+
 		makeTrain()
 
 		 let addPersonBtn= document.getElementById("add-person")
 		 addPersonBtn.addEventListener("click",function(){
-		 	let personInput=document.getElementById ("person") 
+		 	let personInput=document.getElementById ("person")
+		 	let colorPicker = document.getElementById("colorPicker") 
 
-		 	people.push(personInput.value)
-		 	personInput.value=""
-
-
+		 	people.push({
+				 name:personInput.value,
+		 	fav_color:colorPicker.value })
+		 	makeTrain()
 		 	console.log(people)
 		 })
+
+		 let removepersonBtn = document.getElementById("remove-last-person")
+		 removepersonBtn.addEventListener("click", function() {
+		 	people.pop()
+		 	makeTrain()
+		 })
+
+		 
+
 	</script>
 
 </body>
