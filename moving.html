@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+
 	
 
 	<style type="text/css">
 
-		#horse{
-			background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6nia4oL2LcmX-BEFEM3TGjI3x8hqzZkaeaw&s);
-			width:200px;
-			height:200px;
-			background-size:contain;
-			background-repeat:no-repeat;
-			position:absolute;
-			left:100px;
-			top:100px;
-			transition:5s;
-		}
+	
 
 	</style>
+	<script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
 </head>
 <body>
+	<script>
+		function setup() {
+			createCanvas(400,400)
+		}
 
-   <div id="horse"></div>
-
-   <script type="text/javascript">
-
-   	fuction move ()
-{}
+		function draw() {
+			background("#7ccbe6");
+		fill(235, 204, 8)//yellow
+			noStroke()
+			
+			ellipse(50, 80, 150, 60)
+			fill("#51e8bc")//turquoise
+			noStroke()
+			
+			fill("#8c753f")//brown
+			circle(800,800,500)
+			
+			noStroke()
+			rect(5, 5, 150,50)
+		}
+	</script>
 </body>
 </html>
+
+   
